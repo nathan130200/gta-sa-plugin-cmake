@@ -13,7 +13,6 @@ add_library(${PLUGIN_NAME} SHARED
 target_link_libraries(${PLUGIN_NAME}
     $<$<CONFIG:Release>:plugin.lib>
     $<$<CONFIG:Debug>:plugin_d.lib>
-    "nethost.lib"
 )
 
 # PluginSDK include directories.
@@ -31,7 +30,6 @@ target_link_directories(${PLUGIN_NAME}
         "$ENV{DXSDK_DIR}/Lib/x86"
         "$ENV{PLUGIN_SDK_DIR}/output/lib"
         "$ENV{PLUGIN_SDK_DIR}/shared/bass"
-        "${PROJECT_SOURCE_DIR}/vendor/coreclr"
 )
 
 # Add target compile definitions.
